@@ -204,6 +204,7 @@ body {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .socials-tooltip {
@@ -235,7 +236,7 @@ footer {
   .card-container {
     width: 45.625rem;
     height: 17.5rem;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1.5fr;
   }
 
   .img-container {
@@ -244,11 +245,10 @@ footer {
 
   .card-img {
     height: 100%;
-    width: 100%;
   }
 
   .info-container {
-    padding: 2rem 2.5rem 2rem 2rem;
+    padding: 2rem 2.5rem 2rem 2.5rem;
   }
 
   .preview-text {
