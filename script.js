@@ -1,30 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
   const shareBtn = document.getElementById("share-btn");
-  const tooltip = document.querySelector(".tooltip");
+  const socialLinksContainer = document.querySelector(".socials-links-box");
   const main = document.querySelector("main");
 
   // Ensure the tooltip is hidden initially
-  tooltip.style.display = "none";
+  socialLinksContainer.style.display = "none";
 
   shareBtn.addEventListener("click", () => {
-    const isVisible = tooltip.style.display === "flex";
+    const isVisible = socialLinksContainer.style.display === "flex";
     if (isVisible) {
-      tooltip.style.display = "none";
+      socialLinksContainer.style.display = "none";
     } else {
       const btnRect = shareBtn.getBoundingClientRect();
       const mainRect = main.getBoundingClientRect();
 
-      // Position tooltip above the button relative to the main element
-      tooltip.style.top = `${btnRect.top - mainRect.top - tooltip.offsetHeight}px`;
-      tooltip.style.left = `${btnRect.left - mainRect.left + btnRect.width / 2}px`;
-      tooltip.style.display = "flex";
+      socialLinksContainer.style.top = `${
+        btnRect.top - mainRect.top - socialLinksContainer.offsetHeight
+      }px`;
+      socialLinksContainer.style.left = `${
+        btnRect.left - mainRect.left + btnRect.width / 2
+      }px`;
+      socialLinksContainer.style.display = "flex";
     }
   });
 
   // Hide tooltip when clicking outside
   document.addEventListener("click", (event) => {
-    if (!shareBtn.contains(event.target) && !tooltip.contains(event.target)) {
-      tooltip.style.display = "none";
+    if (
+      !shareBtn.contains(event.target) &&
+      !socialLinksContainer.contains(event.target)
+    ) {
+      socialLinksContainer.style.display = "none";
     }
   });
 });
