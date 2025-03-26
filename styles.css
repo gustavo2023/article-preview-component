@@ -230,6 +230,17 @@ main {
   letter-spacing: 0.3125rem;
 }
 
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: var(--dark-gray-blue) transparent transparent transparent;
+}
+
 footer {
   color: var(--gray-blue);
   font-size: var(--font-size-2);
@@ -267,7 +278,7 @@ footer {
 
   @media (min-width: 64rem) {
     .tooltip {
-      display: flex; /* Show tooltip only on larger screens */
+      display: flex; 
     }
   }
 }
