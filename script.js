@@ -1,36 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const shareBtn = document.getElementById("share-btn");
-  const socialLinksContainer = document.querySelector(".socials-links-box");
-  const main = document.querySelector("main");
+const main = document.querySelector("main");
+const authorInfoContainer = document.querySelector(".author-info-container");
+const authorInfo = document.querySelector(".author-info");
+const socialLinksBox = document.querySelector(".socials-links-box");
+const shareBtn = document.querySelector(".share-btn");
 
-  // Ensure the tooltip is hidden initially
-  socialLinksContainer.style.display = "none";
+socialLinksBox.style.display = "none";
 
-  shareBtn.addEventListener("click", () => {
-    const isVisible = socialLinksContainer.style.display === "flex";
-    if (isVisible) {
-      socialLinksContainer.style.display = "none";
-    } else {
-      const btnRect = shareBtn.getBoundingClientRect();
-      const mainRect = main.getBoundingClientRect();
+const positionTooltip = () => {
+  const btnRect = shareBtn.getBoundingClientRect();
+  const mainRect = main.getBoundingClientRect();
 
-      socialLinksContainer.style.top = `${
-        btnRect.top - mainRect.top - socialLinksContainer.offsetHeight
-      }px`;
-      socialLinksContainer.style.left = `${
-        btnRect.left - mainRect.left + btnRect.width / 2
-      }px`;
-      socialLinksContainer.style.display = "flex";
-    }
-  });
+  socialLinksBox.style.top = `${
+    btnRect.top - mainRect.top - socialLinksBox.offsetHeight - 25
+  }px`;
+  socialLinksBox.style.left = `${
+    btnRect.left - mainRect.left + btnRect.width / 2
+  }px`;
+  socialLinksBox.style.display = "flex";
+};
 
-  // Hide tooltip when clicking outside
-  document.addEventListener("click", (event) => {
-    if (
-      !shareBtn.contains(event.target) &&
-      !socialLinksContainer.contains(event.target)
-    ) {
-      socialLinksContainer.style.display = "none";
-    }
-  });
+const closeTooltip = (e) => {
+  if (!socialLinksBox.contains(e.target) && !shareBtn.contains(e.target)) {
+    socialLinksBox.style.display = "none";
+  }
+};
+
+shareBtn.addEventListener("click", () => {
+  if (socialLinksBox.style.display === "none") {
+    positionTooltip();
+  } else {
+    socialLinksBox.style.display = "none";
+  }
 });
+
+document.addEventListener("click", closeTooltip);
