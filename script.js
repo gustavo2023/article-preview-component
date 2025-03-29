@@ -28,6 +28,7 @@ const closeTooltip = (e) => {
 const displaySocialLinks = () => {
   authorInfo.style.display = "none";
   authorInfoContainer.style.backgroundColor = "#48556a";
+  authorInfoContainer.style.padding = "0.874rem 2rem";
   socialLinksBox.style.display = "flex";
 };
 
@@ -46,6 +47,7 @@ shareBtns[1].addEventListener("click", () => {
     socialLinksBox.style.display = "none";
     authorInfo.style.display = "flex";
     authorInfoContainer.style.backgroundColor = "#fff";
+    authorInfoContainer.style.padding = "0 2rem 1.25rem 2rem";
   }
 });
 
