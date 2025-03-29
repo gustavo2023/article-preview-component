@@ -211,11 +211,11 @@ main {
   cursor: pointer;
 }
 
-.share-btn.one {
+.share-btn.desktop {
   display: none;
 }
 
-.share-btn.two {
+.share-btn.mobile {
   display: flex;
 }
 
@@ -273,11 +273,11 @@ footer {
     letter-spacing: 0.01563rem;
   }
 
-  .share-btn.one {
+  .share-btn.desktop {
     display: flex;
   }
 
-  .share-btn.two {
+  .share-btn.mobile {
     display: none;
   }
 
