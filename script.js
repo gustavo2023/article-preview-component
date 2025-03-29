@@ -33,14 +33,14 @@ const toggleSocialLinksMobile = () => {
     authorInfo.style.display = "flex";
     authorInfoContainer.style.backgroundColor = "#fff";
     authorInfoContainer.style.padding = "0 2rem 1.25rem 2rem";
-    shareBtnMobile.style.backgroundColor = "#ecf2f8";
+    shareBtn.style.backgroundColor = "#ecf2f8";
     svgPath.style.fill = "#6E8098";
   } else {
     authorInfo.style.display = "none";
     authorInfoContainer.style.backgroundColor = "#48556a";
     authorInfoContainer.style.padding = "0.874rem 2rem 0.875rem 1rem";
     socialLinksBox.style.display = "flex";
-    shareBtnMobile.style.backgroundColor = "#6E8098";
+    shareBtn.style.backgroundColor = "#6E8098";
     svgPath.style.fill = "#fff";
   }
 };
