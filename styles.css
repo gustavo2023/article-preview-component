@@ -199,12 +199,6 @@ main {
   letter-spacing: 0.00763rem;
 }
 
-.buttons-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .share-btn {
   display: flex;
   justify-content: center;
