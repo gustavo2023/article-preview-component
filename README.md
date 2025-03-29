@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to Solution](https://your-solution-url.com)
+- Solution URL: [Link to Solution](https://www.frontendmentor.io/solutions/responsive-article-preview-component-using-html-css-and-javascript-jayGFwh5iM)
 - Live Site URL: [Live Demo](https://gustavo2023.github.io/article-preview-component/)
 
 ## My process
@@ -45,8 +45,8 @@ Users should be able to:
 ### What I learned
 
 - **Manipulating the DOM:** learned to select elements from the DOM using JavaScript. This way I can dynamically modify their behavior and properties.
-- **Dynamic Behavior Based on Screen Size:** by using ```window.innerWidth``` I implemented functionality that dynamically adjusts based on the screen size.
-- **Refactoring for Maintainability:** initially I used two separate buttons with distinct event listeners and functionality. While this worked, it introduced redundancy in both the HTML and JavaScript, making the code harder to maintain and extend. Later, I replaced the two buttons for a single button and dynamically adjusted its behavior based on the screen size. I created reusable functions (e.g., ```toggleTooltipDesktop``` and ```toggleSocialLinksMobile```) to improve modularity.
+- **Dynamic Behavior Based on Screen Size:** by using `window.innerWidth` I implemented functionality that dynamically adjusts based on the screen size.
+- **Refactoring for Maintainability:** initially I used two separate buttons with distinct event listeners and functionality. While this worked, it introduced redundancy in both the HTML and JavaScript, making the code harder to maintain and extend. Later, I replaced the two buttons for a single button and dynamically adjusted its behavior based on the screen size. I created reusable functions (e.g., `toggleTooltipDesktop` and `toggleSocialLinksMobile`) to improve modularity.
 
 ## Author
 
