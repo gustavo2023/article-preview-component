@@ -282,7 +282,7 @@ footer {
   }
 
   .socials-links-box {
-    display: flex;
+    display: none;
     position: absolute;
     z-index: 1000;
     width: 15.5rem;
