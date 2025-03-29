@@ -21,7 +21,11 @@ const positionTooltip = () => {
 };
 
 const closeTooltip = (e) => {
-  if (!socialLinksBox.contains(e.target) && !shareBtns.contains(e.target)) {
+  const isClickInsideButton = Array.from(shareBtns).some((btn) =>
+    btn.contains(e.target)
+  );
+
+  if (!socialLinksBox.contains(e.target) && !isClickInsideButton) {
     socialLinksBox.style.display = "none";
   }
 };
