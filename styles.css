@@ -211,14 +211,6 @@ main {
   cursor: pointer;
 }
 
-.share-btn.desktop {
-  display: none;
-}
-
-.share-btn.mobile {
-  display: flex;
-}
-
 .socials-links-box {
   display: none;
   z-index: 1000;
@@ -271,14 +263,6 @@ footer {
     font-size: var(--font-size-3);
     line-height: var(--line-height-3);
     letter-spacing: 0.01563rem;
-  }
-
-  .share-btn.desktop {
-    display: flex;
-  }
-
-  .share-btn.mobile {
-    display: none;
   }
 
   .socials-links-box {
